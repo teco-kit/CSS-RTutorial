@@ -71,6 +71,7 @@ test  <- data[-trainIndex1,]
 x=train(train[,-1], train[,1], method = "nb") #knn,nb,...
 p=predict(x,test[-1])
 confusionMatrix(p,as.factor(test$label))
+#Klassifizierte Klassenaufteilung
 featurePlot(x = test[-1],     y = p,  plot = "pairs")
 
 
